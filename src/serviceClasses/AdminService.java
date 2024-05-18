@@ -2,11 +2,28 @@ package serviceClasses;
 
 import entity.User;
 
+import static serviceInterfaces.Utils.*;
+
 public class AdminService implements serviceInterfaces.AdminService {
+    private User currentUser;
 
     @Override
     public void service(User user) {
+        currentUser = user;
+        while (true){
+            switch (getInt("""
+                    0 exit
+                    1 add hotel
+                    2 show hotel
+                    3 show hotels
+                    4 edit hotel
+                    5 
+                    
+                    
+                    """)){
 
+            }
+        }
     }
 
     @Override
