@@ -2,10 +2,14 @@ package serviceClasses;
 
 import entity.User;
 
+import static serviceInterfaces.Utils.getInt;
+
 public class UserService implements serviceInterfaces.UserService {
+    private User currentUser;
 
     @Override
     public void service(User user) {
+        currentUser=user;
 
     }
 

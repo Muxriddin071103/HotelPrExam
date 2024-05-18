@@ -51,6 +51,10 @@ public class Hotel {
         this.location = location;
     }
 
+    public String getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Hotel{" +
