@@ -92,9 +92,9 @@ public class HotelService implements serviceInterfaces.HotelService {
         showAll();
 
         System.out.println("Enter the ID of the hotel you want to delete");
-        String Id=strScanner.nextLine();
+        id=strScanner.nextLine();
         for (Hotel hotel : database.hotels) {
-            if (hotel.getId().equals(Id)){
+            if (hotel.getId().equals(id)){
                 database.hotels.remove(hotel);
                 return true;
             }
