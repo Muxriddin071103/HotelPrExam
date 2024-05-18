@@ -39,6 +39,13 @@ public class ReservationService implements serviceInterfaces.ReservationService 
         return db.reservations.add(reservation);
     }
 
+    public void showAllReservations(){
+        System.out.println("All reservations:");
+        for (Reservation reservation : db.reservations){
+            System.out.println(reservation);
+        }
+    }
+
     @Override
     public Reservation showReservation(String id) {
         System.out.println("Enter reservation Id: ");
