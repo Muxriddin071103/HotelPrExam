@@ -3,7 +3,7 @@ package entity;
 import java.util.UUID;
 
 public class Hotel {
-    private final String  id=UUID.randomUUID().toString();
+    private final String id=UUID.randomUUID().toString();
     private String name;
     private Location location;
     private Integer floors;
@@ -18,6 +18,8 @@ public class Hotel {
         this.floors = floors;
         this.roomsCount = roomsCount;
     }
+
+
 
     public Integer getFloors() {
         return floors;

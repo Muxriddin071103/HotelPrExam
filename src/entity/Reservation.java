@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class Reservation {
-    private final String  id= UUID.randomUUID().toString();
+    private final String id= UUID.randomUUID().toString();
     private User user;
     private Hotel hotel;
     private Integer floor;
@@ -13,6 +13,7 @@ public class Reservation {
     private LocalDate endDate;
     private LocalDate earliestFinishedDate;
     private Boolean earlierFinished;
+    private Boolean isFinished;
 
     public Reservation() {
     }
@@ -76,6 +77,30 @@ public class Reservation {
 
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
+    }
+
+    public LocalDate getEarliestFinishedDate() {
+        return earliestFinishedDate;
+    }
+
+    public void setEarliestFinishedDate(LocalDate earliestFinishedDate) {
+        this.earliestFinishedDate = earliestFinishedDate;
+    }
+
+    public Boolean getEarlierFinished() {
+        return earlierFinished;
+    }
+
+    public void setEarlierFinished(Boolean earlierFinished) {
+        this.earlierFinished = earlierFinished;
+    }
+
+    public Boolean getFinished() {
+        return isFinished;
+    }
+
+    public void setFinished(Boolean finished) {
+        isFinished = finished;
     }
 
     @Override

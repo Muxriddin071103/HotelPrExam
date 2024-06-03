@@ -40,9 +40,9 @@ public class HotelService implements serviceInterfaces.HotelService {
     @Override
     public Hotel show(String id) {
         System.out.println("Enter the ID of the hotel wanted to show");
-        String Id= strScanner.nextLine();
+        id= strScanner.nextLine();
         for (Hotel hotel : database.hotels) {
-            if (hotel.getId().equals(Id)) {
+            if (hotel.getId().equals(id)) {
                 return hotel;
             }
         }
@@ -92,9 +92,9 @@ public class HotelService implements serviceInterfaces.HotelService {
         showAll();
 
         System.out.println("Enter the ID of the hotel you want to delete");
-        String Id=strScanner.nextLine();
+        id=strScanner.nextLine();
         for (Hotel hotel : database.hotels) {
-            if (hotel.getId().equals(Id)){
+            if (hotel.getId().equals(id)){
                 database.hotels.remove(hotel);
                 return true;
             }
